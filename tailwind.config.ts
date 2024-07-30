@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        barlow: ["Barlow", "sans-serif"],
+      },
+
+      colors: {
+        "brand-primary": "#4534AC",
+        "brand-secondary": "#202020",
+        "brand-primary-dark": "#4C38C2",
+        "brand-red": "#FF6B6B",
+        "brand-green": "#0ECC5A",
+        "brand-orange": "#FFA235",
       },
     },
   },
