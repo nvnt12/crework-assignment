@@ -5,7 +5,7 @@ import { VscEye, VscEyeClosed } from "react-icons/vsc";
 type InputProps = {
   label: string;
   name: string;
-  type: "text" | "password" | "number" | "email";
+  type: "text" | "password" | "number" | "email" | "date" | "textarea";
   placeholder: string;
   required: boolean;
   defaultValue: string;
@@ -13,7 +13,7 @@ type InputProps = {
   errors: any;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   options?: any;
-  classNames?: string;
+  className?: string;
 };
 
 export default function Input({
@@ -21,7 +21,7 @@ export default function Input({
   name,
   type = "text",
   placeholder,
-  classNames,
+  className,
   required,
   defaultValue,
   register,
@@ -46,7 +46,7 @@ export default function Input({
           placeholder={placeholder}
           className={cn(
             "bg-brand-background w-full rounded-lg py-3 h-12 px-4 text-lg text-gray-600 border focus:outline-none focus:border-brand-primary border-transparent",
-            classNames
+            className
           )}
           required={required}
           defaultValue={defaultValue}

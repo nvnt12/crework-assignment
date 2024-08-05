@@ -1,19 +1,23 @@
 import { cn } from "@/utils/cn";
 
 type ButtonProps = {
-  label: string;
+  label?: string;
   type: "button" | "submit" | "reset";
   isDisabled: boolean;
-  classNames?: string;
+  className?: string;
   onClick?: any;
+  icon?: any;
+  iconPosition?: "left" | "right";
 };
 
 export default function PrimaryButton({
   label,
   type = "button",
   isDisabled,
-  classNames,
+  className,
   onClick,
+  icon,
+  iconPosition = "left",
 }: ButtonProps) {
   return (
     <button
@@ -21,11 +25,13 @@ export default function PrimaryButton({
       disabled={isDisabled}
       onClick={onClick}
       className={cn(
-        "bg-brand-primary hover:bg-brand-primary-dark border border-brand-primary hover:border-brand-primary-dark text-white text-lg font-semibold h-12 w-full rounded-lg",
-        classNames
+        "bg-brand-primary shadow-inner shadow-white/40 hover:bg-brand-primary-dark border border-brand-primary flex justify-center items-center gap-2 hover:border-brand-primary-dark text-white text-lg font-medium h-12 w-full rounded-lg",
+        className
       )}
     >
-      {label}
+      {icon && iconPosition === "right" && <span>{icon}</span>}
+      {label && label}
+      {icon && iconPosition === "left" && <span>{icon}</span>}
     </button>
   );
 }

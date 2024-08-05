@@ -1,7 +1,11 @@
+import MainSection from "@/components/MainSection";
+import Sidebar from "@/components/Sidebar";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="font-bold">Hello</h1>
+    <main className="flex w-full h-full">
+      <Sidebar />
+      <MainSection />
     </main>
   );
 }

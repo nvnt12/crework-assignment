@@ -73,7 +73,7 @@ export default function SignUp() {
               },
             }}
           />
-          <PrimaryButton label="Login" type="submit" isDisabled={false} />
+          <PrimaryButton label="Sign up" type="submit" isDisabled={false} />
         </form>
         <p className="text-gray-500 font-medium text-lg">
           Already have an account?&nbsp;
